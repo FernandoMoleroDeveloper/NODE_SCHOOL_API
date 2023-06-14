@@ -7,9 +7,10 @@ module.exports = {
   overrides: [],
   parserOptions: {
     ecmaVersion: "latest",
+    sourceType: "module",
     project: ["./tsconfig.json"],
   },
-  ignorePatterns: ["dist/"],
+  ignorePatterns: ["dist/*"],
   rules: {
     "semi": "off",
     "space-before-function-paren": "off",
@@ -25,11 +26,12 @@ module.exports = {
       "error",
       {
         multiline: { delimiter: "semi", requireLast: true },
-        singleline: { delimiter: "semi", requireLast: false },
+        singleline: { delimiter: "semi", requireLast: true },
       },
     ],
     "@typescript-eslint/no-misused-promises": "off",
     "@typescript-eslint/strict-boolean-expressions": "off",
-    "@typescript-eslint/restrict-plus-operands": "off",
+    "@typescript-eslint/array-type": "off",
+    "@typescript-eslint/consistent-type-imports": "off",
   },
 };
